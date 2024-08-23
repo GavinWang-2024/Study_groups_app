@@ -11,6 +11,4 @@
 
 
 
-
-
-<img width="360" alt="Screenshot 2024-08-23 at 12 04 59 PM" src="https://github.com/user-attachments/assets/235e046b-68b0-4a89-ae7a-a89468da0aaa">
+<img width="504" alt="Screenshot 2024-08-23 at 12 04 59 PM" src="https://github.com/user-attachments/assets/ae30d0bd-23c8-4c3a-ae70-297fa64aaa28">
