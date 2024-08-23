@@ -35,6 +35,8 @@ StudyGroup is a Django-based web application to connect users. Users can create 
 
 -Messaging: Users can post messages in rooms, and messages are updated in real time.
 
+-Mobile Friendly
+
 -REST API: Provides endpoints for accessing rooms and topics programmatically.
 
 
