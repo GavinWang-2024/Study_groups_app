@@ -11,4 +11,7 @@
 
 
 
-
+<div style="display: flex; justify-content: space-between; align-items: center;">
+  <img width="504" alt="Screenshot 2024-08-23 at 12 04 59 PM" src="https://github.com/user-attachments/assets/ae30d0bd-23c8-4c3a-ae70-297fa64aaa28">
+  <img width="504" alt="Screenshot 2024-08-23 at 12 08 40 PM" src="https://github.com/user-attachments/assets/4809bef3-c670-4f8e-86ca-45478338b365">
+</div>
