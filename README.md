@@ -14,7 +14,6 @@
 </p>
 
 <p float="left">
-  <img src="https://github.com/user-attachments/assets/c3c6120c-c6b9-4734-94f1-0392ee2dd195" width="45%" />
   <img width="203" alt="Screenshot 2024-08-23 at 12 07 24 PM" src="https://github.com/user-attachments/assets/92901806-20e5-4c11-9585-d8f3b0efc02a">
 
   <img src="https://github.com/user-attachments/assets/5c073482-00b8-4911-9563-2ac44c2e3f9b" width="45%" />
