@@ -19,6 +19,12 @@
 
 
 
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/0180b74f-6da8-4d49-8578-7b7feafba7a0" width="45%" />
+  <img src="https://github.com/user-attachments/assets/5c073482-00b8-4911-9563-2ac44c2e3f9b" width="45%" />
+</p>
+
+
 # StudyGroup App
 
 ## Overview
@@ -235,7 +241,6 @@ Returns the serialized data as a JSON response.
 1.```path('admin/', admin.site.urls)```
 Maps the URL path admin/ to Django's built-in admin interface. This is standard for Django projects, providing access to the admin dashboard.
 
-
 2.```path('', include('base.urls'))```
 Maps the root URL (/) to the base app's URL configurations. This means any URL patterns defined in base.urls will be accessible directly from the root.
 
@@ -244,13 +249,12 @@ Maps the URL path starting with api/ to the URL configurations defined in base.a
 
 
 
-### urls.py in the base App Directory
+### base/urls.py
 
 
 
 1.```path('', views.home, name='home')```
 Maps the root URL to the home view. This serves as the homepage of the application where users can see a list of discussion rooms.
-
 
 2.```path('login/', views.loginPage, name='login')```
 Maps the login/ URL to the loginPage view. This URL allows users to log in.
@@ -276,56 +280,29 @@ Maps the update-room/<str:pk>/ URL to the updateRoom view, where <str:pk> repres
 9.```path('delete-room/<str:pk>/', views.deleteRoom, name='delete-room')```
 Maps the delete-room/<str:pk>/ URL to the deleteRoom view, where <str:pk> represents the room's unique ID. This URL allows the host to delete a room.
 
-path('delete-message/<str:pk>/', views.deleteMessage, name='delete-message'):
-
+10.```path('delete-message/<str:pk>/', views.deleteMessage, name='delete-message'):```
 Maps the delete-message/<str:pk>/ URL to the deleteMessage view, where <str:pk> represents the message's unique ID. This URL allows users to delete their own messages.
-path('update-user/', views.updateUser, name='update-user'):
 
+11.```path('update-user/', views.updateUser, name='update-user')```
 Maps the update-user/ URL to the updateUser view. This URL allows users to update their profile information.
-path('topics/', views.topicsPage, name='topics'):
 
+12.```path('topics/', views.topicsPage, name='topics')```
 Maps the topics/ URL to the topicsPage view. This URL displays a list of all topics.
-path('activity/', views.activityPage, name='activity'):
 
+13.```path('activity/', views.activityPage, name='activity')```
 Maps the activity/ URL to the activityPage view. This URL shows recent activity and messages across all rooms.
-urls.py in the api Subdirectory (within base)
-This file typically defines URL patterns for API endpoints, which are part of the REST API functionality.
 
-python
-Copy code
-from django.urls import path
-from . import views
 
-urlpatterns = [
-    path('', views.getRoutes, name='routes'),
-    path('rooms/', views.getRooms, name='rooms'),
-    path('rooms/<str:pk>/', views.getRoom, name='room'),
-]
-Explanation:
 
-path('', views.getRoutes, name='routes'):
 
+### api/urls.py
+
+1.```path('', views.getRoutes, name='routes')```
 Maps the root API URL (/api/) to the getRoutes view. This URL provides a list of available API routes for developers.
-path('rooms/', views.getRooms, name='rooms'):
 
+2.```path('rooms/', views.getRooms, name='rooms')```
 Maps the rooms/ URL to the getRooms view. This URL retrieves and displays a list of all rooms in JSON format.
-path('rooms/<str:pk>/', views.getRoom, name='room'):
 
+3.```path('rooms/<str:pk>/', views.getRoom, name='room')```
 Maps the rooms/<str:pk>/ URL to the getRoom view, where <str:pk> represents the room's unique ID. This URL retrieves and displays details of a specific room in JSON format.
 
-
-
-
-
-
-
-
-
-
-
-rest api stuff
-
-<p float="left">
-  <img src="https://github.com/user-attachments/assets/0180b74f-6da8-4d49-8578-7b7feafba7a0" width="45%" />
-  <img src="https://github.com/user-attachments/assets/5c073482-00b8-4911-9563-2ac44c2e3f9b" width="45%" />
-</p>
