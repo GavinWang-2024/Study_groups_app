@@ -75,6 +75,7 @@ python manage.py runserver
 ```
 
 
+
 ## Usage
 
 -Register a new account or log in with an existing account.
@@ -88,6 +89,7 @@ python manage.py runserver
 
 ### base/views.py
 
+
 1.```loginPage(request)```
 Purpose: Handles user login.
 Functionality:
@@ -96,11 +98,12 @@ If not, processes the login form submission. It retrieves the email and password
 If authentication fails, an error message is displayed.
 Renders the login page template with a context indicating it's the login page.
 
-2.```logoutUser(request)```
 
+2.```logoutUser(request)```
 Purpose: Logs out the user.
 Functionality:
 Uses Django's logout function to log the user out and then redirects to the home page.
+
 
 3.```registerPage(request)```
 Purpose: Handles user registration.
@@ -110,12 +113,14 @@ If the form is valid, it saves the new user, logs them in, and redirects to the 
 If not valid, displays an error message.
 Renders the registration page template with the registration form.
 
+
 ```home(request)```
 Purpose: Displays the homepage with a list of discussion rooms.
 Functionality:
 Retrieves a search query parameter (q) from the request to filter rooms by topic, name, or description.
 Fetches topics and room messages related to the query.
 Passes the rooms, room count, topics, and room messages to the home.html template for rendering.
+
 
 ```room(request, pk)```
 Purpose: Displays a specific room and its messages.
@@ -125,12 +130,14 @@ Fetches all messages and participants related to the room.
 Handles POST requests to add a new message to the room.
 Renders the room.html template with the room details, messages, and participants.
 
+
 ```userProfile(request, pk)```
 Purpose: Displays a user's profile.
 Functionality:
 Retrieves the user object using the primary key (pk).
 Fetches all rooms and messages associated with the user.
 Passes the user, rooms, messages, and topics to the profile.html template.
+
 
 ```updateUser(request)```
 Purpose: Allows a user to update their profile information.
@@ -140,6 +147,7 @@ Processes form submissions to update the user's details.
 Saves changes and redirects to the user's profile page if the form is valid.
 Renders the edit-user.html template with the form.
 
+
 ```createRoom(request)```
 Purpose: Allows users to create a new discussion room.
 Functionality:
@@ -147,6 +155,7 @@ Initializes a room creation form.
 On POST, retrieves or creates a topic, then creates a new room with the provided details.
 Redirects to the home page after successfully creating a room.
 Renders the room_form.html template with the form and available topics.
+
 
 ```updateRoom(request, pk)```
 Purpose: Allows the host to update a room's details.
@@ -156,6 +165,7 @@ Checks if the current user is the room's host.
 Handles form submission to update the room's details, saves the changes, and redirects to the home page.
 Renders the room_form.html template with the form, room, and topics.
 
+
 ```deleteRoom(request, pk)```
 Purpose: Allows the host to delete a room.
 Functionality:
@@ -163,6 +173,7 @@ Retrieves the room using the primary key (pk).
 Checks if the current user is the room's host.
 On POST, deletes the room and redirects to the home page.
 Renders the delete.html template with the room details.
+
 
 ```deleteMessage(request, pk)```
 Purpose: Allows users to delete their own messages.
@@ -172,6 +183,7 @@ Checks if the current user is the message author.
 On POST, deletes the message and redirects to the home page.
 Renders the delete.html template with the message details.
 
+
 ```topicsPage(request)```
 Purpose: Displays a list of topics.
 Functionality:
@@ -179,11 +191,14 @@ Retrieves a search query parameter (q) to filter topics.
 Fetches topics that match the query.
 Renders the topics.html template with the topics.
 
+
 ```activityPage(request)```
 Purpose: Displays recent activity in all rooms.
 Functionality:
 Retrieves all room messages.
 Passes the messages to the activity.html template for rendering.
+
+
 
 
 
@@ -194,12 +209,14 @@ Purpose: Provides a list of available API routes.
 Functionality:
 Returns a static list of routes that describe the available API endpoints.
 
+
 ```getRooms(request)```
 Purpose: Retrieves a list of all rooms.
 Functionality:
 Queries the database for all room instances.
 Serializes the room data using the RoomSerializer.
 Returns the serialized data as a JSON response.
+
 
 ```getRoom(request, pk)```
 Purpose: Retrieves details of a specific room by its ID.
